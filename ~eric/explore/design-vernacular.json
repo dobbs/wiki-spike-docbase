@@ -1,0 +1,537 @@
+{
+  "title": "Design Vernacular",
+  "story": [
+    {
+      "id": "4554000",
+      "type": "paragraph",
+      "text": "This exploration began without a charter. Ward and Mike provided our trailhead. Ward shared field notes from his own exploration of Mary Shaw's Myths and mythconceptions: what does it mean to be a programming language, anyhow? Mike reminisced about vernacular programming from the 90s Computer Supported Cooperative Work. [https://matrix.to/#/!ORfrUEFeWFcHAMLFLr:matrix.org/$168808894022689WYXqE:matrix.org?via=matrix.org&via=matrix.allmende.io&via=decentralised.cafe matrix]"
+    },
+    {
+      "id": "2c3ac000",
+      "type": "paragraph",
+      "text": "See [[Vernacular Developers]]."
+    },
+    {
+      "id": "73065800",
+      "type": "paragraph",
+      "text": "See Myths and mythconceptions. Mary Shaw. 2022. [https://dl.acm.org/doi/10.1145/3480947 acm]"
+    },
+    {
+      "id": "d0a8000",
+      "type": "paragraph",
+      "text": "Searching for Mike's work in the 90s turned up a paper. Where are designers? Styles of design practice, objects of design and views of users in computer supported cooperative work. Mike Hales. 1994. [https://www.researchgate.net/publication/265092081_Where_are_designers_Styles_of_design_practice_objects_of_design_and_views_of_users_in_computer_supported_cooperative_work researchgate]"
+    },
+    {
+      "type": "paragraph",
+      "id": "a4beb5ddc17b16b0",
+      "text": "Some insights from \"Myths and mythconceptions.\""
+    },
+    {
+      "type": "paragraph",
+      "id": "d9216f96c252236c",
+      "text": "Routine, or precedented, design is appropriate in well-understood settings where a body of\nengineering and domain knowledge supports finding solutions that are similar to established solutions."
+    },
+    {
+      "type": "paragraph",
+      "id": "973315ce8990dbe5",
+      "text": "Innovative, or unprecedented, design is appropriate when extensions to engineering and\ndomain knowledge are required to find satisfactory solutions. This largely aligns with\nexploratory programming, especially when the design is exploring what’s actually possible."
+    },
+    {
+      "type": "paragraph",
+      "id": "689f83a93bc54408",
+      "text": "Myths have an enduring appeal that resists objective evidence. Sometimes changing the story behind a myth changes peoples’ attachment to it. The programming language myths arise, I think, from a deep-rooted need for certainty. Indeed, it is possible to find certainty within a formal system. The world, however is uncertain—messy, nondeterministic, ambiguous, human. It does not lend itself to the precision required for formal definitions, and that prevents the certainties within our formal systems from being translated with confidence to the world. We should certainly continue to aspire to precision and completeness—but we should also provide support for practical software that runs in a context of inherent uncertainty."
+    },
+    {
+      "type": "paragraph",
+      "id": "2976ea9b65cca240",
+      "text": "Most of the challenges to our myths have been with us for a long time, but we have waved them off, treated them as special cases, apologized, or told ourselves that if we just tried really really hard we could bring our practical problems into the world imagined by our myths. It’s long past time to move on from the myths—to embrace, rather than deny, incompleteness and uncertainty. It’s time to recognize the prevalence of vernacular developers, the role of exploratory program- ming, and the need to embed theory in tools. Perhaps the AI Revolution will be the final straw that forces us to this point of view."
+    },
+    {
+      "type": "paragraph",
+      "id": "dba5d9486c828daa",
+      "text": "Some insights from \"Where are designers?\""
+    },
+    {
+      "type": "html",
+      "id": "f92ac7b2f93ed1bd",
+      "text": "<table>\n<tr><th>Style</th><th>1</th><th>2</th><th>3</th></tr>\n<tr>\n<th>Users seen as</th>\n<td>Formal clients</td>\n<td>Permitted co-designers</td>\n<td>Illegitimate actor/constructors</td>\n</tr>\n<tr>\n<th>Primary problem seen as</th>\n<td>Specify and deliver</td>\n<td>Reflect and reinterpret</td>\n<td>Enable and empower</td>\n</tr>\n<tr>\n<th>Professional identity as</th>\n<td>Technician</td>\n<td>Knowledging' agent/facilitator</td>\n<td>Scriptwriter/set designer/voice coach</td>\n</tr>\n<tr>\n<th>Managing seen as</th>\n<td>Technique</td>\n<td>Task-team building</td>\n<td>Struggle for resources & for legitimacy to close the action</td>\n</tr>\n</table>"
+    },
+    {
+      "type": "paragraph",
+      "id": "a6aa374d5caac4af",
+      "text": "This is why talk about interface design as 'empowering' is simply reckless. At its best—if managers can guarantee necessary resources—good interfaces may be enabling. At its worst, the imminently-baroque articulation of usability- oriented expertise and apparatus that we currently see in the HCI domain may be just another twist in the pathetic modern tale of professionals claiming to improve the rest of us by abstracting our world from us and doling it back again. Because they themselves were not at the scene of the crime—Taylorism and its less systematic precursors has been doing the thieving for a long time now—it's possible for members of the HCI community to feel that they are doing humanity a favour by redistributing the spoils of cognitive science. The historical view is a little more complicated and uncomfortable—for all of us in professional occupations. Illich (1975) offers a classic analysis of this syndrome, demonstrating why users' interests are not those of professionals. Empowerment is and will remain the rarest of moments, and it would not be unreasonable to take the view that, when professionals do succeed in having anything to do with empowerment, it won't be because of professionalism."
+    },
+    {
+      "type": "pagefold",
+      "id": "e583605f27714f70",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "81bc1ee883e5b4a4",
+      "text": "input operation output"
+    },
+    {
+      "type": "paragraph",
+      "id": "b695f789d6ec4953",
+      "text": "noun verb suggestion from early Apple Human Computer Interface guidelines"
+    },
+    {
+      "type": "paragraph",
+      "id": "f23d7c7aedb18bc6",
+      "text": "jquery using CSS selectors for the noun and function application for the verb"
+    },
+    {
+      "type": "paragraph",
+      "id": "42332d2f6f7a3147",
+      "text": "wiki probes and survey are a kind wiki graph query language"
+    },
+    {
+      "type": "paragraph",
+      "id": "70ace0a3c9ce66db",
+      "text": "See [[Computational Medium]]."
+    },
+    {
+      "type": "paragraph",
+      "id": "baaf0d16a4baf2b1",
+      "text": "Ward asked me to reflect on my experience with AutoCAD and AutoLISP. That code was my first steps from vernacular programming towards something like professional programming although more as an apprentice in an academic context. I earned my keep by illustrating concepts and examples from the history of perspective. An amateur programmer—genuinely love programming—seeking a way to learn animation, I bought a book about customizing AutoCAD. That work led to a five month extension of my informal apprenticeship in Siena, Italy."
+    },
+    {
+      "type": "reference",
+      "id": "0bf29e348c8dc4da",
+      "text": "In 2003 I re-created an animation of a vanishing point in javascript and SVG.  The original animation was built with AutoCAD 10 and custom AUTOLISP scripts I created in the fall of 1990.  Happily amazed that 15 years later this code runs unchanged in modern browsers. [http://dobbse.net/thinair/2003/12/vanishing-point.html blog]",
+      "site": "frame.wiki.dbbs.co",
+      "slug": "vanishing-point",
+      "title": "Vanishing Point"
+    },
+    {
+      "type": "paragraph",
+      "id": "ac1bbb011e65cfc0",
+      "text": "Wiki probes and surveys are leveraging the frame plugin I contributed to the federation. Frames are also related to the work I did in AutoCAD."
+    },
+    {
+      "type": "reference",
+      "id": "8d5a68a762a327f5",
+      "site": "frame.wiki.dbbs.co",
+      "slug": "changing-frames",
+      "title": "Changing Frames",
+      "text": "Perception depends on context. From one point of view the way seems impassible. From another point of view the path is revealed. Each view is limited by its own frame. Changing frames changes perception. Changing perception changes both understanding and action."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Design Vernacular",
+        "story": [
+          {
+            "id": "4554000",
+            "type": "paragraph",
+            "text": "This exploration began without a charter. Ward and Mike provided our trailhead. Ward shared field notes from his own exploration of Mary Shaw's Myths and mythconceptions: what does it mean to be a programming language, anyhow? Mike reminisced about vernacular programming from the 90s Computer Supported Cooperative Work. [https://matrix.to/#/!ORfrUEFeWFcHAMLFLr:matrix.org/$168808894022689WYXqE:matrix.org?via=matrix.org&via=matrix.allmende.io&via=decentralised.cafe matrix]"
+          },
+          {
+            "id": "2c3ac000",
+            "type": "paragraph",
+            "text": "See [[Vernacular Developers]]."
+          },
+          {
+            "id": "73065800",
+            "type": "paragraph",
+            "text": "See Myths and mythconceptions. Mary Shaw. 2022. [https://dl.acm.org/doi/10.1145/3480947 acm]"
+          },
+          {
+            "id": "d0a8000",
+            "type": "paragraph",
+            "text": "Searching for Mike's work in the 90s turned up a paper. Where are designers? Styles of design practice, objects of design and views of users in computer supported cooperative work. Mike Hales. 1994. [https://www.researchgate.net/publication/265092081_Where_are_designers_Styles_of_design_practice_objects_of_design_and_views_of_users_in_computer_supported_cooperative_work researchgate]"
+          }
+        ]
+      },
+      "date": 1688244986302
+    },
+    {
+      "type": "fork",
+      "date": 1688245159977
+    },
+    {
+      "id": "bdc5926b1753634d",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "bdc5926b1753634d",
+        "text": "Routine, or precedented, design is appropriate in well-understood settings where a body of\nengineering and domain knowledge supports finding solutions that are similar to established solutions."
+      },
+      "after": "d0a8000",
+      "attribution": {
+        "page": "Vernacular Developers",
+        "site": "found.ward.fed.wiki"
+      },
+      "date": 1688245198893
+    },
+    {
+      "id": "973315ce8990dbe5",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "973315ce8990dbe5",
+        "text": "Innovative, or unprecedented, design is appropriate when extensions to engineering and\ndomain knowledge are required to find satisfactory solutions. This largely aligns with\nexploratory programming, especially when the design is exploring what’s actually possible."
+      },
+      "after": "bdc5926b1753634d",
+      "attribution": {
+        "page": "Vernacular Developers",
+        "site": "found.ward.fed.wiki"
+      },
+      "date": 1688245206110
+    },
+    {
+      "type": "add",
+      "id": "689f83a93bc54408",
+      "item": {
+        "type": "paragraph",
+        "id": "689f83a93bc54408",
+        "text": "Myths have an enduring appeal that resists objective evidence. Sometimes changing the story behind a myth changes peoples’ attachment to it. The programming language myths arise, I think, from a deep-rooted need for certainty. Indeed, it is possible to find certainty within a formal system. The world, however is uncertain—messy, nondeterministic, ambiguous, human. It does not lend itself to the precision required for formal definitions, and that prevents the certainties within our formal systems from being translated with confidence to the world. We should certainly continue to aspire to precision and completeness—but we should also provide support for practical software that runs in a context of inherent uncertainty."
+      },
+      "after": "973315ce8990dbe5",
+      "date": 1688245438571
+    },
+    {
+      "type": "add",
+      "id": "2976ea9b65cca240",
+      "item": {
+        "type": "paragraph",
+        "id": "2976ea9b65cca240",
+        "text": "Most of the challenges to our myths have been with us for a long time, but we have waved them off, treated them as special cases, apologized, or told ourselves that if we just tried really really hard we could bring our practical problems into the world imagined by our myths. It’s long past time to move on from the myths—to embrace, rather than deny, incompleteness and uncertainty. It’s time to recognize the prevalence of vernacular developers, the role of exploratory program- ming, and the need to embed theory in tools. Perhaps the AI Revolution will be the final straw that forces us to this point of view."
+      },
+      "after": "689f83a93bc54408",
+      "date": 1688245445841
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f92ac7b2f93ed1bd"
+      },
+      "id": "f92ac7b2f93ed1bd",
+      "type": "add",
+      "after": "2976ea9b65cca240",
+      "date": 1688245574553
+    },
+    {
+      "type": "edit",
+      "id": "f92ac7b2f93ed1bd",
+      "item": {
+        "type": "html",
+        "id": "f92ac7b2f93ed1bd",
+        "text": "<table>\n<tr>\n<td>TBD</td>\n</tr>\n</table>"
+      },
+      "date": 1688245722850
+    },
+    {
+      "type": "edit",
+      "id": "f92ac7b2f93ed1bd",
+      "item": {
+        "type": "html",
+        "id": "f92ac7b2f93ed1bd",
+        "text": "<table>\n<tr><th>Style</th><th>1</th><th>2</th><th>3</th></tr>\n<tr>\n<th>Users seen as</th>\n<td>Formal clients</td>\n<td>Permitted co-designers</td>\n<td>Illegitimate actor/constructors</td>\n</tr>\n<tr>\n<th>Primary problem</th>\n<td>Specify and deliver</td>\n<td>Reflect and reinterpret</td>\n<td>Enable and empower</td>\n</tr>\n<tr>\n<th>Professional identity</th>\n<td>Technician</td>\n<td>Knowledging' agent/facilitator</td>\n<td>Scriptwriter/set designer/voice coach</td>\n</tr>\n<tr>\n<th>Managing seen as</th>\n<td>Technique</td>\n<td>Task-team building</td>\n<td>Struggle for resources & for legitimacy to close the action</td>\n</tr>\n</table>"
+      },
+      "date": 1688246051155
+    },
+    {
+      "type": "edit",
+      "id": "f92ac7b2f93ed1bd",
+      "item": {
+        "type": "html",
+        "id": "f92ac7b2f93ed1bd",
+        "text": "<table>\n<tr><th>Style</th><th>1</th><th>2</th><th>3</th></tr>\n<tr>\n<th>Users seen as</th>\n<td>Formal clients</td>\n<td>Permitted co-designers</td>\n<td>Illegitimate actor/constructors</td>\n</tr>\n<tr>\n<th>Primary problem seen as</th>\n<td>Specify and deliver</td>\n<td>Reflect and reinterpret</td>\n<td>Enable and empower</td>\n</tr>\n<tr>\n<th>Professional identity as</th>\n<td>Technician</td>\n<td>Knowledging' agent/facilitator</td>\n<td>Scriptwriter/set designer/voice coach</td>\n</tr>\n<tr>\n<th>Managing seen as</th>\n<td>Technique</td>\n<td>Task-team building</td>\n<td>Struggle for resources & for legitimacy to close the action</td>\n</tr>\n</table>"
+      },
+      "date": 1688246078606
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a6aa374d5caac4af"
+      },
+      "id": "a6aa374d5caac4af",
+      "type": "add",
+      "after": "f92ac7b2f93ed1bd",
+      "date": 1688246563365
+    },
+    {
+      "type": "edit",
+      "id": "a6aa374d5caac4af",
+      "item": {
+        "type": "paragraph",
+        "id": "a6aa374d5caac4af",
+        "text": "This is why talk about interface design as 'empowering' is simply reckless. At its best—if managers can guarantee necessary resources—good interfaces may be enabling. At its worst, the imminently-baroque articulation of usability- oriented expertise and apparatus that we currently see in the HCI domain may be just another twist in the pathetic modern tale of professionals claiming to improve the rest of us by abstracting our world from us and doling it back again. Because they themselves were not at the scene of the crime—Taylorism and its less systematic precursors has been doing the thieving for a long time now—it's possible for members of the HCI community to feel that they are doing humanity a favour by redistributing the spoils of cognitive science. The historical view is a little more complicated and uncomfortable—for all of us in professional occupations. Illich (1975) offers a classic analysis of this syndrome, demonstrating why users' interests are not those of professionals. Empowerment is and will remain the rarest of moments, and it would not be unreasonable to take the view that, when professionals do succeed in having anything to do with empowerment, it won't be because of professionalism."
+      },
+      "date": 1688246669316
+    },
+    {
+      "type": "edit",
+      "id": "bdc5926b1753634d",
+      "item": {
+        "type": "paragraph",
+        "id": "bdc5926b1753634d",
+        "text": "Routine, or precedented, design is appropriate in well-understood settings where a body of\nengineering and domain knowledge supports finding"
+      },
+      "date": 1688246683804
+    },
+    {
+      "type": "remove",
+      "id": "bdc5926b1753634d",
+      "date": 1688246693367
+    },
+    {
+      "type": "add",
+      "id": "a4beb5ddc17b16b0",
+      "item": {
+        "type": "paragraph",
+        "id": "a4beb5ddc17b16b0",
+        "text": "Some quotes from Myths and mythconceptions."
+      },
+      "after": "d0a8000",
+      "date": 1688246716034
+    },
+    {
+      "type": "add",
+      "id": "d9216f96c252236c",
+      "item": {
+        "type": "paragraph",
+        "id": "d9216f96c252236c",
+        "text": "Routine, or precedented, design is appropriate in well-understood settings where a body of\nengineering and domain knowledge supports finding solutions that are similar to established solutions."
+      },
+      "after": "a4beb5ddc17b16b0",
+      "date": 1688246717933
+    },
+    {
+      "type": "add",
+      "id": "dba5d9486c828daa",
+      "item": {
+        "type": "paragraph",
+        "id": "dba5d9486c828daa",
+        "text": "Some insights from \"Where are designers?\""
+      },
+      "after": "2976ea9b65cca240",
+      "date": 1688246741586
+    },
+    {
+      "type": "edit",
+      "id": "a4beb5ddc17b16b0",
+      "item": {
+        "type": "paragraph",
+        "id": "a4beb5ddc17b16b0",
+        "text": "Some insights from \"Myths and mythconceptions.\""
+      },
+      "date": 1688246751307
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e583605f27714f70"
+      },
+      "id": "e583605f27714f70",
+      "type": "add",
+      "after": "a6aa374d5caac4af",
+      "date": 1688247264968
+    },
+    {
+      "type": "edit",
+      "id": "e583605f27714f70",
+      "item": {
+        "type": "pagefold",
+        "id": "e583605f27714f70",
+        "text": "."
+      },
+      "date": 1688247267884
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "81bc1ee883e5b4a4"
+      },
+      "id": "81bc1ee883e5b4a4",
+      "type": "add",
+      "after": "e583605f27714f70",
+      "date": 1688247424411
+    },
+    {
+      "type": "edit",
+      "id": "81bc1ee883e5b4a4",
+      "item": {
+        "type": "paragraph",
+        "id": "81bc1ee883e5b4a4",
+        "text": "input operation output"
+      },
+      "date": 1688252463591
+    },
+    {
+      "type": "add",
+      "id": "b695f789d6ec4953",
+      "item": {
+        "type": "paragraph",
+        "id": "b695f789d6ec4953",
+        "text": "noun verb suggestion from early Apple Human Computer Interface guidelines"
+      },
+      "after": "81bc1ee883e5b4a4",
+      "date": 1688252504210
+    },
+    {
+      "type": "add",
+      "id": "f23d7c7aedb18bc6",
+      "item": {
+        "type": "paragraph",
+        "id": "f23d7c7aedb18bc6",
+        "text": "jquery using CSS selectors for the noun and function application for the verb"
+      },
+      "after": "b695f789d6ec4953",
+      "date": 1688252530492
+    },
+    {
+      "type": "add",
+      "id": "42332d2f6f7a3147",
+      "item": {
+        "type": "paragraph",
+        "id": "42332d2f6f7a3147",
+        "text": "wiki probes and survey are a kind wiki graph query language"
+      },
+      "after": "f23d7c7aedb18bc6",
+      "date": 1688252586323
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8d5a68a762a327f5"
+      },
+      "id": "8d5a68a762a327f5",
+      "type": "add",
+      "after": "42332d2f6f7a3147",
+      "date": 1688252672229
+    },
+    {
+      "type": "edit",
+      "id": "8d5a68a762a327f5",
+      "item": {
+        "type": "reference",
+        "id": "8d5a68a762a327f5",
+        "site": "frame.wiki.dbbs.co",
+        "slug": "changing-frames",
+        "title": "Changing Frames",
+        "text": "Perception depends on context. From one point of view the way seems impassible. From another point of view the path is revealed. Each view is limited by its own frame. Changing frames changes perception. Changing perception changes both understanding and action."
+      },
+      "date": 1688252676883
+    },
+    {
+      "type": "add",
+      "id": "baaf0d16a4baf2b1",
+      "item": {
+        "type": "paragraph",
+        "id": "baaf0d16a4baf2b1",
+        "text": "Ward asked me to reflect on my experience with AutoCAD and AutoLISP. That code was my first steps from vernacular programming towards something like professional programming in an academic context. See [[Vanishing Point]]."
+      },
+      "after": "42332d2f6f7a3147",
+      "date": 1688253129822
+    },
+    {
+      "type": "edit",
+      "id": "baaf0d16a4baf2b1",
+      "item": {
+        "type": "paragraph",
+        "id": "baaf0d16a4baf2b1",
+        "text": "Ward asked me to reflect on my experience with AutoCAD and AutoLISP. That code was my first steps from vernacular programming towards something like professional programming although more as an apprentice in an academic context. I earned my keep by illustrating concepts and examples from the history of perspective. An amateur programmer—genuinely love programming—seeking a way to learn animation, I bought a book about customizing AutoCAD. That work led to a five month extension of my informal apprenticeship in Siena, Italy. See [[Vanishing Point]]."
+      },
+      "date": 1688254057070
+    },
+    {
+      "type": "add",
+      "id": "0bf29e348c8dc4da",
+      "item": {
+        "type": "factory",
+        "id": "0bf29e348c8dc4da",
+        "text": "..."
+      },
+      "after": "baaf0d16a4baf2b1",
+      "date": 1688254497421
+    },
+    {
+      "type": "edit",
+      "id": "0bf29e348c8dc4da",
+      "item": {
+        "type": "reference",
+        "id": "0bf29e348c8dc4da",
+        "text": "In 2003 I re-created an animation of a vanishing point in javascript and SVG.  The original animation was built with AutoCAD 10 and custom AUTOLISP scripts I created in the fall of 1990.  Happily amazed that 15 years later this code runs unchanged in modern browsers. [http://dobbse.net/thinair/2003/12/vanishing-point.html blog]",
+        "site": "frame.wiki.dbbs.co",
+        "slug": "vanishing-point",
+        "title": "Vanishing Point"
+      },
+      "date": 1688254502305
+    },
+    {
+      "type": "edit",
+      "id": "baaf0d16a4baf2b1",
+      "item": {
+        "type": "paragraph",
+        "id": "baaf0d16a4baf2b1",
+        "text": "Ward asked me to reflect on my experience with AutoCAD and AutoLISP. That code was my first steps from vernacular programming towards something like professional programming although more as an apprentice in an academic context. I earned my keep by illustrating concepts and examples from the history of perspective. An amateur programmer—genuinely love programming—seeking a way to learn animation, I bought a book about customizing AutoCAD. That work led to a five month extension of my informal apprenticeship in Siena, Italy."
+      },
+      "date": 1688254517049
+    },
+    {
+      "type": "add",
+      "id": "ac1bbb011e65cfc0",
+      "item": {
+        "type": "paragraph",
+        "id": "ac1bbb011e65cfc0",
+        "text": "Wiki probes and surveys are leveraging the frame plugin I contributed to the federation. Frames are also related to the work I did in AutoCAD."
+      },
+      "after": "baaf0d16a4baf2b1",
+      "date": 1688254649978
+    },
+    {
+      "id": "0bf29e348c8dc4da",
+      "type": "move",
+      "order": [
+        "4554000",
+        "2c3ac000",
+        "73065800",
+        "d0a8000",
+        "a4beb5ddc17b16b0",
+        "d9216f96c252236c",
+        "973315ce8990dbe5",
+        "689f83a93bc54408",
+        "2976ea9b65cca240",
+        "dba5d9486c828daa",
+        "f92ac7b2f93ed1bd",
+        "a6aa374d5caac4af",
+        "e583605f27714f70",
+        "81bc1ee883e5b4a4",
+        "b695f789d6ec4953",
+        "f23d7c7aedb18bc6",
+        "42332d2f6f7a3147",
+        "baaf0d16a4baf2b1",
+        "0bf29e348c8dc4da",
+        "ac1bbb011e65cfc0",
+        "8d5a68a762a327f5"
+      ],
+      "date": 1688254652522
+    },
+    {
+      "type": "add",
+      "id": "70ace0a3c9ce66db",
+      "item": {
+        "type": "factory",
+        "id": "70ace0a3c9ce66db",
+        "text": "..."
+      },
+      "after": "42332d2f6f7a3147",
+      "date": 1688259368816
+    },
+    {
+      "type": "edit",
+      "id": "70ace0a3c9ce66db",
+      "item": {
+        "type": "paragraph",
+        "id": "70ace0a3c9ce66db",
+        "text": "See [[Computational Medium]]."
+      },
+      "date": 1688259398659
+    }
+  ]
+}

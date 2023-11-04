@@ -1,0 +1,663 @@
+{
+  "title": "Vernacular Developers",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "b67a69b0e080dcaa",
+      "text": "A vernacular software developer creates software in a specific context, has principal responsibility in that context, and has professional training, if any,\nin that context rather than in software development. The alternative term\n“end user programmer” is\npejorative; “non-professional” is misleading as\nmany are professional, just at something else. [https://dl.acm.org/doi/pdf/10.1145/3480947 pdf]"
+    },
+    {
+      "type": "paragraph",
+      "id": "2ccc1d8680f078a9",
+      "text": "Vernacular developers are typically not trained, nor interested in being trained, to use traditional\ngeneral-purpose programming languages, nor do they necessarily\nshare the cultural knowledge of the software domain or its engineering sensibilities about system integrity, maintenance, backup,\nand the like."
+    },
+    {
+      "type": "paragraph",
+      "id": "24d9dbd348aa3033",
+      "text": "It is important to support programmers who are developing the software as a way of understanding their problems or the ramifications of their decisions. These people are using software to work toward a specification rather than from one."
+    },
+    {
+      "type": "paragraph",
+      "id": "104a118a9bc1981f",
+      "text": "The models and abstractions embedded in traditional programming languages are foreign to\nmany vernacular software developers. These developers may become frustrated while trying to\nunderstand how to apply these foreign concepts to their own tasks. Conversely, the models of\nsome non-language tools may be frustratingly foreign to professional developers."
+    },
+    {
+      "type": "markdown",
+      "id": "2de62132f379dce9",
+      "text": "# Models"
+    },
+    {
+      "type": "paragraph",
+      "id": "d063c1bf34622b9a",
+      "text": "Using AutoCAD successfully\nrequires more than the ability to visualize 3D objects. Orchestrating the interaction with other parts\nof the ecosystem is also a programming activity, for\nexample when converting the 3D model to a toolpath\nfor a CNC machine tool\nor preparing it for 3D printing by adjusting for the\nproperties of the intended material and providing\nauxiliary support structure."
+    },
+    {
+      "type": "markdown",
+      "id": "a53ecf46a4f7a5e8",
+      "text": "# Theory"
+    },
+    {
+      "type": "paragraph",
+      "id": "cf7cdac5545a0a27",
+      "text": "A senior industrial developer with a PhD recently said, “Over several years, I’ve tried and failed to\nlearn functional programming because that means learning a big pile of applied category theory.\nDespite claims that I can just use the parts I do understand, I find that reusing common libraries,\nlike web serving, entails understanding\nthe advanced stuff because it’s revealed\nin their interfaces.”"
+    },
+    {
+      "type": "markdown",
+      "id": "0e5c952b60b242f0",
+      "text": "# Correctness"
+    },
+    {
+      "type": "paragraph",
+      "id": "cb4ce2c694c9e2a1",
+      "text": "Real software components have incomplete, evolving, heterogeneous, and nonmonotonic descriptions; a propensity to change without notice; and undocumented assumptions.\nTheir descriptions evolve as new information is\ngathered from usage or analysis."
+    },
+    {
+      "type": "paragraph",
+      "id": "21ac852ccfc7edc7",
+      "text": "The completeness of specifications is particularly problematic. First, the list of properties that\nmight be specified is open-ended, and it’s hard to list them all, let alone to verify them. When\nobservable properties are not specified, programmers may make tacit assumptions that run afoul\nof the actual implementation."
+    },
+    {
+      "type": "paragraph",
+      "id": "d8c2900375cefb8e",
+      "text": "The criteria for “fitness for purpose”, whether the software is “good enough”, depend on things\nlike the consequence of something going wrong and the likelihood that a problem will be detected\nand corrected before anything goes seriously wrong."
+    },
+    {
+      "type": "markdown",
+      "id": "47078d4a06628a4e",
+      "text": "# Scripting"
+    },
+    {
+      "type": "paragraph",
+      "id": "9a0d6a57d1e9a575",
+      "text": "A programming error in a set of Python scripts commonly used for computational analysis of chemistry data returned varying results based on which operating system they were run on—throwing\ndoubt on the results of more than 150 published\nchemistry studies."
+    },
+    {
+      "type": "paragraph",
+      "id": "3e930ab383a3ca7f",
+      "text": "The reason for the variation was the scripts’ use\nof Python’s glob module, which searches for files\nmatching a specific name pattern—the scripts\ngenerated a list of input files to read based on\nthe glob results. But the module depends on the\noperating system for the order in which the files\nare returned.`"
+    },
+    {
+      "type": "markdown",
+      "id": "384ac1cfc6d9a90d",
+      "text": "# Design"
+    },
+    {
+      "type": "paragraph",
+      "id": "bdc5926b1753634d",
+      "text": "Routine, or precedented, design is appropriate in well-understood settings where a body of\nengineering and domain knowledge supports finding solutions that are similar to established solutions."
+    },
+    {
+      "type": "paragraph",
+      "id": "973315ce8990dbe5",
+      "text": "Innovative, or unprecedented, design is appropriate when extensions to engineering and\ndomain knowledge are required to find satisfactory solutions. This largely aligns with\nexploratory programming, especially when the design is exploring what’s actually possible."
+    },
+    {
+      "type": "paragraph",
+      "id": "289548c2117e14cd",
+      "text": "Inkwell illustrates a contrast between two design paradigms. Designers work in two important\nmodes: design as problem-solving and design as problem-setting."
+    },
+    {
+      "type": "paragraph",
+      "id": "cee0df1944fc0731",
+      "text": "Our myths celebrate design as problem-solving, of which Simon was a leading proponent. But there’s another side of design, of which Schön was the leading proponent where the designer begins with partial\nunderstanding of what’s actually needed and\nevolves that understanding by “conversation with\nthe materials”."
+    },
+    {
+      "type": "pagefold",
+      "id": "b0d111c4a8663814",
+      "text": "."
+    },
+    {
+      "type": "markdown",
+      "id": "b56569af2ff845fe",
+      "text": "I am feeling a much stronger need to analyze each of the little html scripts I write in my daily use from the two distinct perspectives. I should ask myself a few telling questions: [https://matrix.to/#/!ORfrUEFeWFcHAMLFLr:matrix.org/$168813320026825aPLlC:matrix.org?via=matrix.org&via=matrix.allmende.io&via=decentralised.cafe matrix]\n\n* How do I understand my problem from doing the work in wiki unscripted?\n* How have I made a place where I might add a button or some other new element?\n* How did I assemble and check the information from wiki that would be input to my button?\n* What was the purpose of each step of the program I then wrote? How did I check that?\n* How has what I know about my inputs allowed me to write a simpler program?\n* What did I show on the page or add to the lineup as output? Did that encourage subsequent automation?\n* How did the practice of writing the script improve my confidence exercising my will in this environment?"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Vernacular Developers",
+        "story": []
+      },
+      "date": 1688083226232
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b67a69b0e080dcaa"
+      },
+      "id": "b67a69b0e080dcaa",
+      "type": "add",
+      "date": 1688083295487
+    },
+    {
+      "type": "edit",
+      "id": "b67a69b0e080dcaa",
+      "item": {
+        "type": "paragraph",
+        "id": "b67a69b0e080dcaa",
+        "text": "A vernacular software developer creates software in a specific context, has principal responsibility in that context, and has professional training, if any,\nin that context rather than in software development."
+      },
+      "date": 1688083325475
+    },
+    {
+      "type": "add",
+      "id": "043467b0479427bd",
+      "item": {
+        "type": "paragraph",
+        "id": "043467b0479427bd",
+        "text": "The alternative terms\n“end user” and “end user programmer” are\npejorative; “non-professional” is misleading as\nmany are professional, just at something else. "
+      },
+      "after": "b67a69b0e080dcaa",
+      "date": 1688083374488
+    },
+    {
+      "type": "edit",
+      "id": "043467b0479427bd",
+      "item": {
+        "type": "paragraph",
+        "id": "043467b0479427bd",
+        "text": "The alternative term\n“end user programmer” are\npejorative; “non-professional” is misleading as\nmany are professional, just at something else. "
+      },
+      "date": 1688083422333
+    },
+    {
+      "type": "edit",
+      "id": "043467b0479427bd",
+      "item": {
+        "type": "paragraph",
+        "id": "043467b0479427bd",
+        "text": "The alternative term\n“end user programmer” is\npejorative; “non-professional” is misleading as\nmany are professional, just at something else. "
+      },
+      "date": 1688083433407
+    },
+    {
+      "type": "remove",
+      "id": "043467b0479427bd",
+      "date": 1688083451524
+    },
+    {
+      "type": "edit",
+      "id": "b67a69b0e080dcaa",
+      "item": {
+        "type": "paragraph",
+        "id": "b67a69b0e080dcaa",
+        "text": "A vernacular software developer creates software in a specific context, has principal responsibility in that context, and has professional training, if any,\nin that context rather than in software development. The alternative term\n“end user programmer” is\npejorative; “non-professional” is misleading as\nmany are professional, just at something else. "
+      },
+      "date": 1688083454613
+    },
+    {
+      "type": "edit",
+      "id": "b67a69b0e080dcaa",
+      "item": {
+        "type": "paragraph",
+        "id": "b67a69b0e080dcaa",
+        "text": "A vernacular software developer creates software in a specific context, has principal responsibility in that context, and has professional training, if any,\nin that context rather than in software development. The alternative term\n“end user programmer” is\npejorative; “non-professional” is misleading as\nmany are professional, just at something else. [https://dl.acm.org/doi/pdf/10.1145/3480947 pdf]"
+      },
+      "date": 1688083493257
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2ccc1d8680f078a9"
+      },
+      "id": "2ccc1d8680f078a9",
+      "type": "add",
+      "after": "b67a69b0e080dcaa",
+      "date": 1688083569282
+    },
+    {
+      "type": "edit",
+      "id": "2ccc1d8680f078a9",
+      "item": {
+        "type": "paragraph",
+        "id": "2ccc1d8680f078a9",
+        "text": "Vernacular developers are typically not trained, nor interested in being trained, to use traditional\ngeneral-purpose programming languages, nor do they necessarily\nshare the cultural knowledge of the software domain or its engineering sensibilities about system integrity, maintenance, backup,\nand the like."
+      },
+      "date": 1688083572723
+    },
+    {
+      "type": "add",
+      "id": "24d9dbd348aa3033",
+      "item": {
+        "type": "paragraph",
+        "id": "24d9dbd348aa3033",
+        "text": "It is important to support programmers who are developing the software as a way of understanding their problems or the ramifications of their decisions. These people are using software to work toward a specification rather than from one."
+      },
+      "after": "2ccc1d8680f078a9",
+      "date": 1688084646009
+    },
+    {
+      "type": "add",
+      "id": "104a118a9bc1981f",
+      "item": {
+        "type": "paragraph",
+        "id": "104a118a9bc1981f",
+        "text": "The models and abstractions embedded in traditional programming languages are foreign to\nmany vernacular software developers. These developers may become frustrated while trying to\nunderstand how to apply these foreign concepts to their own tasks. Conversely, the models of\nsome non-language tools may be frustratingly foreign to professional developers."
+      },
+      "after": "24d9dbd348aa3033",
+      "date": 1688085004325
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2de62132f379dce9"
+      },
+      "id": "2de62132f379dce9",
+      "type": "add",
+      "after": "104a118a9bc1981f",
+      "date": 1688085171981
+    },
+    {
+      "type": "edit",
+      "id": "2de62132f379dce9",
+      "item": {
+        "type": "markdown",
+        "id": "2de62132f379dce9",
+        "text": "# AutoCAD"
+      },
+      "date": 1688085178136
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d063c1bf34622b9a"
+      },
+      "id": "d063c1bf34622b9a",
+      "type": "add",
+      "after": "2de62132f379dce9",
+      "date": 1688085224927
+    },
+    {
+      "type": "edit",
+      "id": "d063c1bf34622b9a",
+      "item": {
+        "type": "paragraph",
+        "id": "d063c1bf34622b9a",
+        "text": "Using AutoCAD successfully\nrequires more than the ability to visualize 3D objects. Orchestrating the interaction with other parts\nof the ecosystem is also a programming activity, for\nexample when converting the 3D model to a toolpath\nfor a CNC machine tool\nor preparing it for 3D printing by adjusting for the\nproperties of the intended material and providing\nauxiliary support structure. "
+      },
+      "date": 1688085261615
+    },
+    {
+      "type": "edit",
+      "id": "d063c1bf34622b9a",
+      "item": {
+        "type": "paragraph",
+        "id": "d063c1bf34622b9a",
+        "text": "Using AutoCAD successfully\nrequires more than the ability to visualize 3D objects. Orchestrating the interaction with other parts\nof the ecosystem is also a programming activity, for\nexample when converting the 3D model to a toolpath\nfor a CNC machine tool\nor preparing it for 3D printing by adjusting for the\nproperties of the intended material and providing\nauxiliary support structure."
+      },
+      "date": 1688085659900
+    },
+    {
+      "type": "add",
+      "id": "a53ecf46a4f7a5e8",
+      "item": {
+        "type": "paragraph",
+        "id": "a53ecf46a4f7a5e8",
+        "text": "# Theory"
+      },
+      "after": "d063c1bf34622b9a",
+      "date": 1688085664991
+    },
+    {
+      "type": "add",
+      "id": "cf7cdac5545a0a27",
+      "item": {
+        "type": "paragraph",
+        "id": "cf7cdac5545a0a27",
+        "text": "A senior industrial developer with a PhD recently said, “Over several years, I’ve tried and failed to\nlearn functional programming because that means learning a big pile of applied category theory.\nDespite claims that I can just use the parts I do understand, I find that reusing common libraries,\nlike web serving, entails understanding\nthe advanced stuff because it’s revealed\nin their interfaces.”"
+      },
+      "after": "a53ecf46a4f7a5e8",
+      "date": 1688085714604
+    },
+    {
+      "type": "edit",
+      "id": "a53ecf46a4f7a5e8",
+      "item": {
+        "type": "markdown",
+        "id": "a53ecf46a4f7a5e8",
+        "text": "# Theory"
+      },
+      "date": 1688085716842
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0e5c952b60b242f0"
+      },
+      "id": "0e5c952b60b242f0",
+      "type": "add",
+      "after": "cf7cdac5545a0a27",
+      "date": 1688086425754
+    },
+    {
+      "type": "edit",
+      "id": "0e5c952b60b242f0",
+      "item": {
+        "type": "markdown",
+        "id": "0e5c952b60b242f0",
+        "text": "# Correctness"
+      },
+      "date": 1688086436801
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cb4ce2c694c9e2a1"
+      },
+      "id": "cb4ce2c694c9e2a1",
+      "type": "add",
+      "after": "0e5c952b60b242f0",
+      "date": 1688086476664
+    },
+    {
+      "type": "edit",
+      "id": "cb4ce2c694c9e2a1",
+      "item": {
+        "type": "paragraph",
+        "id": "cb4ce2c694c9e2a1",
+        "text": "Real software components have incomplete, evolving, heterogeneous, and nonmonotonic descriptions; a propensity to change without notice; and undocumented assumptions.\nTheir descriptions evolve as new information is\ngathered from usage or analysis."
+      },
+      "date": 1688086499780
+    },
+    {
+      "type": "add",
+      "id": "21ac852ccfc7edc7",
+      "item": {
+        "type": "paragraph",
+        "id": "21ac852ccfc7edc7",
+        "text": "The completeness of specifications is particularly problematic. First, the list of properties that\nmight be specified is open-ended, and it’s hard to list them all, let alone to verify them. When\nobservable properties are not specified, programmers may make tacit assumptions that run afoul\nof the actual implementation."
+      },
+      "after": "cb4ce2c694c9e2a1",
+      "date": 1688086563247
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d8c2900375cefb8e"
+      },
+      "id": "d8c2900375cefb8e",
+      "type": "add",
+      "after": "21ac852ccfc7edc7",
+      "date": 1688086680112
+    },
+    {
+      "type": "edit",
+      "id": "d8c2900375cefb8e",
+      "item": {
+        "type": "paragraph",
+        "id": "d8c2900375cefb8e",
+        "text": "The criteria for “fitness for purpose”, whether the software is “good enough”, depend on things\nlike the consequence of something going wrong and the likelihood that a problem will be detected\nand corrected before anything goes seriously wrong."
+      },
+      "date": 1688086705900
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "47078d4a06628a4e"
+      },
+      "id": "47078d4a06628a4e",
+      "type": "add",
+      "after": "d8c2900375cefb8e",
+      "date": 1688087105846
+    },
+    {
+      "type": "edit",
+      "id": "47078d4a06628a4e",
+      "item": {
+        "type": "paragraph",
+        "id": "47078d4a06628a4e",
+        "text": "# Scripting"
+      },
+      "date": 1688087114966
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9a0d6a57d1e9a575"
+      },
+      "id": "9a0d6a57d1e9a575",
+      "type": "add",
+      "after": "47078d4a06628a4e",
+      "date": 1688087257508
+    },
+    {
+      "type": "edit",
+      "id": "9a0d6a57d1e9a575",
+      "item": {
+        "type": "paragraph",
+        "id": "9a0d6a57d1e9a575",
+        "text": "A programming error in a set of Python scripts commonly used for computational analysis of chemistry data returned varying results based on which operating system they were run on—throwing\ndoubt on the results of more than 150 published\nchemistry studies."
+      },
+      "date": 1688087266198
+    },
+    {
+      "type": "edit",
+      "id": "47078d4a06628a4e",
+      "item": {
+        "type": "markdown",
+        "id": "47078d4a06628a4e",
+        "text": "# Scripting"
+      },
+      "date": 1688087270208
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3e930ab383a3ca7f"
+      },
+      "id": "3e930ab383a3ca7f",
+      "type": "add",
+      "after": "9a0d6a57d1e9a575",
+      "date": 1688087301189
+    },
+    {
+      "type": "edit",
+      "id": "3e930ab383a3ca7f",
+      "item": {
+        "type": "paragraph",
+        "id": "3e930ab383a3ca7f",
+        "text": "The reason for the variation was the scripts’ use\nof Python’s glob module, which searches for files\nmatching a specific name pattern—the scripts\ngenerated a list of input files to read based on\nthe glob results. But the module depends on the\noperating system for the order in which the files\nare returned.`"
+      },
+      "date": 1688087308142
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "384ac1cfc6d9a90d"
+      },
+      "id": "384ac1cfc6d9a90d",
+      "type": "add",
+      "after": "3e930ab383a3ca7f",
+      "date": 1688087662877
+    },
+    {
+      "type": "edit",
+      "id": "384ac1cfc6d9a90d",
+      "item": {
+        "type": "paragraph",
+        "id": "384ac1cfc6d9a90d",
+        "text": "# Design"
+      },
+      "date": 1688087672697
+    },
+    {
+      "type": "add",
+      "id": "bdc5926b1753634d",
+      "item": {
+        "type": "paragraph",
+        "id": "bdc5926b1753634d",
+        "text": "Routine, or precedented, design is appropriate in well-understood settings where a body of\nengineering and domain knowledge supports finding solutions that are similar to established solutions."
+      },
+      "after": "384ac1cfc6d9a90d",
+      "date": 1688087706032
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "973315ce8990dbe5"
+      },
+      "id": "973315ce8990dbe5",
+      "type": "add",
+      "after": "bdc5926b1753634d",
+      "date": 1688087759616
+    },
+    {
+      "type": "edit",
+      "id": "973315ce8990dbe5",
+      "item": {
+        "type": "paragraph",
+        "id": "973315ce8990dbe5",
+        "text": "Innovative, or unprecedented, design is appropriate when extensions to engineering and\ndomain knowledge are required to find satisfactory solutions. The engineered systems may be one-of-a-kind,\nor they may be breakthroughs that enable new classes of products. This largely aligns with\nexploratory programming, especially when the design is exploring what’s actually possible."
+      },
+      "date": 1688087802508
+    },
+    {
+      "type": "edit",
+      "id": "973315ce8990dbe5",
+      "item": {
+        "type": "paragraph",
+        "id": "973315ce8990dbe5",
+        "text": "Innovative, or unprecedented, design is appropriate when extensions to engineering and\ndomain knowledge are required to find satisfactory solutions. This largely aligns with\nexploratory programming, especially when the design is exploring what’s actually possible."
+      },
+      "date": 1688087818779
+    },
+    {
+      "type": "edit",
+      "id": "384ac1cfc6d9a90d",
+      "item": {
+        "type": "markdown",
+        "id": "384ac1cfc6d9a90d",
+        "text": "# Design"
+      },
+      "date": 1688087830340
+    },
+    {
+      "type": "add",
+      "id": "289548c2117e14cd",
+      "item": {
+        "type": "paragraph",
+        "id": "289548c2117e14cd",
+        "text": "Inkwell illustrates a contrast between two design paradigms. Designers work in two important\nmodes: design as problem-solving and design as problem-setting [Visser 2006]. Our myths celebrate design as problem-solving, of which Simon [1996] was a leading proponent. In Sciences of\nthe Artificial he presented this problem-solving sort of design as optimization (when the structure\nof the problem is well-known) or heuristic search (in other cases). But there’s another side of"
+      },
+      "after": "973315ce8990dbe5",
+      "date": 1688088343434
+    },
+    {
+      "type": "edit",
+      "id": "289548c2117e14cd",
+      "item": {
+        "type": "paragraph",
+        "id": "289548c2117e14cd",
+        "text": "Inkwell illustrates a contrast between two design paradigms. Designers work in two important\nmodes: design as problem-solving and design as problem-setting. Our myths celebrate design as problem-solving, of which Simon was a leading proponent. But there’s another side of design, of which Schön was the leading proponent, which is design as problem-setting where the designer begins with partial\nunderstanding of what’s actually needed and\nevolves that understanding by “conversation with\nthe materials”."
+      },
+      "date": 1688088466290
+    },
+    {
+      "type": "edit",
+      "id": "289548c2117e14cd",
+      "item": {
+        "type": "paragraph",
+        "id": "289548c2117e14cd",
+        "text": "Inkwell illustrates a contrast between two design paradigms. Designers work in two important\nmodes: design as problem-solving and design as problem-setting."
+      },
+      "date": 1688088496339
+    },
+    {
+      "type": "add",
+      "id": "cee0df1944fc0731",
+      "item": {
+        "type": "paragraph",
+        "id": "cee0df1944fc0731",
+        "text": "Our myths celebrate design as problem-solving, of which Simon was a leading proponent. But there’s another side of design, of which Schön was the leading proponent, which is design as problem-setting where the designer begins with partial\nunderstanding of what’s actually needed and\nevolves that understanding by “conversation with\nthe materials”."
+      },
+      "after": "289548c2117e14cd",
+      "date": 1688088497840
+    },
+    {
+      "type": "edit",
+      "id": "cee0df1944fc0731",
+      "item": {
+        "type": "paragraph",
+        "id": "cee0df1944fc0731",
+        "text": "Our myths celebrate design as problem-solving, of which Simon was a leading proponent. But there’s another side of design, of which Schön was the leading proponent where the designer begins with partial\nunderstanding of what’s actually needed and\nevolves that understanding by “conversation with\nthe materials”."
+      },
+      "date": 1688088554342
+    },
+    {
+      "type": "edit",
+      "id": "2de62132f379dce9",
+      "item": {
+        "type": "markdown",
+        "id": "2de62132f379dce9",
+        "text": "# Models"
+      },
+      "date": 1688088613902
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.fed.wiki",
+      "date": 1688239918414
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b0d111c4a8663814"
+      },
+      "id": "b0d111c4a8663814",
+      "type": "add",
+      "after": "cee0df1944fc0731",
+      "date": 1688245002459
+    },
+    {
+      "type": "edit",
+      "id": "b0d111c4a8663814",
+      "item": {
+        "type": "pagefold",
+        "id": "b0d111c4a8663814",
+        "text": "."
+      },
+      "date": 1688245005600
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b56569af2ff845fe"
+      },
+      "id": "b56569af2ff845fe",
+      "type": "add",
+      "after": "b0d111c4a8663814",
+      "date": 1688245007954
+    },
+    {
+      "type": "edit",
+      "id": "b56569af2ff845fe",
+      "item": {
+        "type": "factory",
+        "id": "b56569af2ff845fe",
+        "text": "I am feeling a much stronger need to analyze each of the little html scripts I write in my daily use from the two distinct perspectives. I should ask myself a few telling questions:\n\n    How do I understand my problem from doing the work in wiki unscripted?\n    How have I made a place where I might add a button or some other new element?\n    How did I assemble and check the information from wiki that would be input to my button?\n    What was the purpose of each step of the program I then wrote? How did I check that?\n    How has what I know about my inputs allowed me to write a simpler program?\n    What did I show on the page or add to the lineup as output? Did that encourage subsequent automation?\n    How did the practice of writing the script improve my confidence exercising my will in this environment?\n"
+      },
+      "date": 1688245031425
+    },
+    {
+      "type": "edit",
+      "id": "b56569af2ff845fe",
+      "item": {
+        "type": "markdown",
+        "id": "b56569af2ff845fe",
+        "text": "I am feeling a much stronger need to analyze each of the little html scripts I write in my daily use from the two distinct perspectives. I should ask myself a few telling questions:\n\n* How do I understand my problem from doing the work in wiki unscripted?\n* How have I made a place where I might add a button or some other new element?\n* How did I assemble and check the information from wiki that would be input to my button?\n* What was the purpose of each step of the program I then wrote? How did I check that?\n* How has what I know about my inputs allowed me to write a simpler program?\n* What did I show on the page or add to the lineup as output? Did that encourage subsequent automation?\n* How did the practice of writing the script improve my confidence exercising my will in this environment?"
+      },
+      "date": 1688245078985
+    },
+    {
+      "type": "edit",
+      "id": "b56569af2ff845fe",
+      "item": {
+        "type": "markdown",
+        "id": "b56569af2ff845fe",
+        "text": "I am feeling a much stronger need to analyze each of the little html scripts I write in my daily use from the two distinct perspectives. I should ask myself a few telling questions: [https://matrix.to/#/!ORfrUEFeWFcHAMLFLr:matrix.org/$168813320026825aPLlC:matrix.org?via=matrix.org&via=matrix.allmende.io&via=decentralised.cafe matrix]\n\n* How do I understand my problem from doing the work in wiki unscripted?\n* How have I made a place where I might add a button or some other new element?\n* How did I assemble and check the information from wiki that would be input to my button?\n* What was the purpose of each step of the program I then wrote? How did I check that?\n* How has what I know about my inputs allowed me to write a simpler program?\n* What did I show on the page or add to the lineup as output? Did that encourage subsequent automation?\n* How did the practice of writing the script improve my confidence exercising my will in this environment?"
+      },
+      "date": 1688245109010
+    }
+  ]
+}
