@@ -1,3 +1,21 @@
+# Reservations
+
+Sigh. I'm already second-guessing this idea.
+
+Wiki farms are a powerful idea. It invites authors to make small,
+focused wikis. Coupled with powerful ideas like a docbase, these could
+become small, purposeful wiki workflows for vernacular programming.
+
+With the cleverness of wiki's full-text search, a small, purposeful
+wiki can also make for useful personal search strategies.
+
+The wiki super collaborator is another inspiration where interesting
+things emerge when we have some control over combining small,
+purposeful namespaces.
+
+But farms are also a source of challenges for wiki hosting. DNS and
+TLS certificates combine to make server management quite complex.
+
 # Local Development
 
     python3 -m http.server
