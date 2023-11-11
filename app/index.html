@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <title>Wiki</title>
+  <link rel="icon" href="icon-120.png" />
+  <link rel="stylesheet" href="./@observablehq/inspector@5/dist/inspector.css" />
+  <script type="module">
+   import {Runtime, Inspector} from './@observablehq/runtime@5/dist/runtime.js';
+   import {Library} from './src/library.js';
+   import {notebook} from './src/notebook.js';
+   import {Plugins} from './src/plugins/index.js'
+   const notebookFromPanel = notebook(Plugins);
+
+   function randomId() {
+     let x = new Uint32Array(2)
+     crypto.getRandomValues(x)
+     return Array.from(x, i=>i.toString(16)).join('')
+   }
+   window.onload = async () => {
+     if (location.search) {
+       let params = new URLSearchParams(location.search);
+       let res = await fetch(new URL(params.get('url'), location.origin));
+       let page = await res.json();
+       let panel = {
+         id: randomId(), flag: '',
+         page
+       };
+       const runtime = new Runtime(Library);
+
+       runtime.module(
+         notebookFromPanel(panel),
+         name => {
+           if (name == 'panel') {
+             return Inspector.into('main')()
+           }
+           return null
+         }
+       );
+     }
+
+   };
+  </script>
+</head>
+<main></main>
