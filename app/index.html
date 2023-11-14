@@ -9,6 +9,9 @@
    import {notebook} from './src/notebook.js';
    import {Plugins} from './src/plugins/index.js';
    const notebookFromPanel = notebook(Plugins);
+   const lineup = [];
+   const neighborhood = new Map();
+   const sitemaps = new Map();
 
    function randomId() {
      let x = new Uint32Array(2);
@@ -28,6 +31,33 @@
        intent: 'unknown'
      };
    }
+
+   function contextFromPage(page) {
+     const storyItemIds = page.story.reduce(
+       (s, i) => (s.add(i.id), s),
+       new Set()
+     );
+     return page.journal.reverse().reduce((acc, change) => {
+       if (change.site) acc.page.add(change.site);
+       if (change.attribution?.site && storyItemIds.has(change.id)) {
+         const {site} = change.attribution;
+         acc.item.set(change.id, {site});
+       }
+       return acc;
+     }, {
+       page: new Set(),
+       item: new Map()
+     });
+   }
+
+   function expandNeighborhoodFromContext(context) {
+     for(let site of context.page) {
+       neighborhood.set(site, null);
+     }
+     for(let {site} of context.item.values()) {
+       neighborhood.set(site, null);
+     }
+   }
    window.onload = async () => {
      let action = intentFromLocation(location);
      if (action.intent === 'unknown') return;
@@ -42,8 +72,20 @@
        const module = runtime.module(
          notebookFromPanel(panel),
          name => (name == 'panel') ? Inspector.into('main')() : null);
+       const context = contextFromPage(panel.page);
+       lineup.push({
+         title: page.title,
+         panel,
+         module,
+         context
+       });
+       expandNeighborhoodFromContext(context);
      }
-
+     window.wiki = {
+       lineup,
+       neighborhood,
+       sitemaps
+     }
    };
   </script>
 </head>
