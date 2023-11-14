@@ -7,13 +7,13 @@
    import {Runtime, Inspector} from './@observablehq/runtime@5/dist/runtime.js';
    import {Library} from './src/library.js';
    import {notebook} from './src/notebook.js';
-   import {Plugins} from './src/plugins/index.js'
+   import {Plugins} from './src/plugins/index.js';
    const notebookFromPanel = notebook(Plugins);
 
    function randomId() {
-     let x = new Uint32Array(2)
-     crypto.getRandomValues(x)
-     return Array.from(x, i=>i.toString(16)).join('')
+     let x = new Uint32Array(2);
+     crypto.getRandomValues(x);
+     return Array.from(x, i=>i.toString(16)).join('');
    }
    window.onload = async () => {
      if (location.search) {
