@@ -15,26 +15,33 @@
      crypto.getRandomValues(x);
      return Array.from(x, i=>i.toString(16)).join('');
    }
+
+   function intentFromLocation(location) {
+     let params = new URLSearchParams(location.search);
+     if (params.has('url')) {
+       return {
+         intent: 'fetch',
+         url: new URL(params.get('url'), location.origin)
+       };
+     }
+     return {
+       intent: 'unknown'
+     };
+   }
    window.onload = async () => {
-     if (location.search) {
-       let params = new URLSearchParams(location.search);
-       let res = await fetch(new URL(params.get('url'), location.origin));
-       let page = await res.json();
-       let panel = {
+     let action = intentFromLocation(location);
+     if (action.intent === 'unknown') return;
+     const runtime = new Runtime(Library);
+     if (action.intent === 'fetch') {
+       const res = await fetch(action.url, {mode: 'cors'});
+       const page = await res.json();
+       const panel = {
          id: randomId(), flag: '',
          page
        };
-       const runtime = new Runtime(Library);
-
-       runtime.module(
+       const module = runtime.module(
          notebookFromPanel(panel),
-         name => {
-           if (name == 'panel') {
-             return Inspector.into('main')()
-           }
-           return null
-         }
-       );
+         name => (name == 'panel') ? Inspector.into('main')() : null);
      }
 
    };
