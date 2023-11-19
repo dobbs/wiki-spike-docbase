@@ -63,8 +63,15 @@
      if (action.intent === 'unknown') return;
      const runtime = new Runtime(Library);
      if (action.intent === 'fetch') {
-       const res = await fetch(action.url, {mode: 'cors'});
-       const page = await res.json();
+       const page = await fetch(action.url, {mode: 'cors'})
+         .then(res => {
+           if (res.ok) {
+             return res.json()
+           } else {
+             throw new Error(res.status)
+           }
+         })
+         .catch(error => {error});
        const panel = {
          id: randomId(), flag: '',
          page
