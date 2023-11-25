@@ -14,7 +14,7 @@ export function notebook(plugins) {
       main.variable().define('width', '490px')
       main.variable().define('title', title)
       main.variable().define('flag', flag)
-      main.variable().define('panelId', `panel${id}`)
+      main.variable().define('panelId', id)
       for(let item of story) {
         // Using item.id to name the Observable variables. Not sure this
         // will be useful. Although id collisions are very unlikely,

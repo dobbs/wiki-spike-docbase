@@ -37,11 +37,11 @@
        (s, i) => (s.add(i.id), s),
        new Set()
      );
-     return page.journal.reverse().reduce((acc, change) => {
-       if (change.site) acc.page.add(change.site);
-       if (change.attribution?.site && storyItemIds.has(change.id)) {
-         const {site} = change.attribution;
-         acc.item.set(change.id, {site});
+     return page.journal.reduceRight((acc, action) => {
+       if (action.site) acc.page.add(action.site);
+       if (action.attribution?.site && storyItemIds.has(action.id)) {
+         const {site} = action.attribution;
+         acc.item.set(action.id, {site});
        }
        return acc;
      }, {
@@ -52,17 +52,78 @@
 
    function expandNeighborhoodFromContext(context) {
      for(let site of context.page) {
-       neighborhood.set(site, null);
+       // TOOD: we will need to throttle the fetching of sitemaps. Set()
+       // objects don't know how to do that. Use a custom Object instead?
+       neighborhood.set(site, sitemapForDomain(site));
      }
-     for(let {site} of context.item.values()) {
-       neighborhood.set(site, null);
-     }
+     // Attribution is a new idea in federated wiki. If we were going
+     // to expand the neighborhood, this is how we could do that:
+     //
+     //  for(let {site} of context.item.values()) {
+     //    neighborhood.set(site, sitemapForDomain(site));
+     //  }
    }
+
+   async function sitemapForDomain(domain) {
+     // TODO: consider how to apply ObservableHQ's Observer protocol
+     // https://github.com/observablehq/runtime#observers
+     // * invoke pending() on initial discovery of a domain (spinning flag)
+     // * invokes fulfilled() on successful retrieval (steady & orthogonal flag)
+     // * invokes rejected() on failed retrieval (spinning flag)
+     // What we have below follows a promise protocol.
+     let result = {domain}
+     if (sitemaps.has(domain)) {
+       result.sitemap = sitemaps.get(domain);
+     } else {
+       result.sitemap = await fetch(`//${domain}/system/sitemap.json`)
+         .then(res => {
+           if (res.ok) {
+             return res.json();
+           } else {
+             throw new Error(res.status);
+           }
+         })
+         .catch(error => {domain, error});
+       sitemaps.set(domain, {domain, sitemap: result.sitemap});
+     }
+     return {domain, sitemap: result.sitemap};
+   }
+
    window.onload = async () => {
      let action = intentFromLocation(location);
+     // TODO: explain options to the reader for dealing with unknown intent
      if (action.intent === 'unknown') return;
+
+     let pageSite;
+     document.body.addEventListener('wiki-link', async event => {
+       const internalLink = event.target;
+       const {title:wantedTitle} = internalLink.dataset;
+       // TODO: There's implicit coupling to the HTML representation here.
+       // find a way to make the coupling explicit.
+       const article = internalLink.closest('article');
+       const panelId = article.getAttribute('id');
+       const panel = lineup.find(p => p.id = panelId);
+       let found;
+       console.log('wiki-link', {wantedTitle, article, panel});
+
+       for (let site of [pageSite, ...panel.context.page]) {
+         let {domain, sitemap={}, error=null} = await neighborhood.get(site);
+         found = sitemap.find(({title}) => wantedTitle.toLowerCase() == title.toLowerCase());
+         console.log('checking site: ', {site, domain, sitemap, error, found});
+         if (found) {
+           found.site = domain
+           break;
+         };
+       }
+       if (found) {
+         window.location = new URL(`./?url=//${found.site}/${found.slug}.json`, location);
+       }
+     });
+
      const runtime = new Runtime(Library);
      if (action.intent === 'fetch') {
+       pageSite = action.url.host;
+       neighborhood.set(pageSite, sitemapForDomain(pageSite));
        const page = await fetch(action.url, {mode: 'cors'})
          .then(res => {
            if (res.ok) {
@@ -71,27 +132,29 @@
              throw new Error(res.status)
            }
          })
-         .catch(error => {error});
+         .catch(error => {action, error});
        const panel = {
-         id: randomId(), flag: '',
+         id: `panel${randomId()}`, flag: '',
          page
        };
+       const context = contextFromPage(page);
+       expandNeighborhoodFromContext(context);
+
        const module = runtime.module(
          notebookFromPanel(panel),
          name => (name == 'panel') ? Inspector.into('main')() : null);
-       const context = contextFromPage(panel.page);
        lineup.push({
          title: page.title,
          panel,
          module,
          context
        });
-       expandNeighborhoodFromContext(context);
      }
      window.wiki = {
        lineup,
        neighborhood,
-       sitemaps
+       sitemaps,
+       contextFromPage
      }
    };
   </script>
