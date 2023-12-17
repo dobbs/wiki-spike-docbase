@@ -58,8 +58,7 @@ export const Library = Object.assign({}, stdlib, {
 
   async html() {
     const {default:DOMPurify} = await import('../dompurify@3/dist/purify.es.min.js');
-    // TODO When do we switch to Observable htx.html?
-    const origHtml = await stdlib.html();
+    const {html:origHtml} = await stdlib.htl();
 
     function sanitize(dirty) {
       const linkified = annotateLinks(dirty);
