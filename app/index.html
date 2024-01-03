@@ -6,9 +6,9 @@
   <script type="module">
    import {Runtime, Inspector} from './@observablehq/runtime@5/dist/runtime.js';
    import {Library} from './src/library.js';
-   import {notebook} from './src/notebook.js';
+   import {panelViewer} from './src/panel-viewer.js';
    import {Plugins} from './src/plugins/index.js';
-   const notebookFromPanel = notebook(Plugins);
+   const viewOfPanel = panelViewer(Plugins);
    const lineup = [];
    const neighborhood = new Map();
    const sitemaps = new Map();
@@ -141,7 +141,7 @@
        expandNeighborhoodFromContext(context);
 
        const module = runtime.module(
-         notebookFromPanel(panel),
+         viewOfPanel(panel),
          name => (name == 'panel') ? Inspector.into('main')() : null);
        lineup.push({
          title: page.title,

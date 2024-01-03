@@ -1,8 +1,8 @@
 /*
   Adapter to convert a wiki panel into an Observable module definition.
 */
-export function notebook(plugins) {
-  return function notebookFromPanel({
+export function panelViewer(plugins) {
+  return function viewOfPanel({
     id,
     flag, /* TODO maybe change flag to site and lookup the flag from the site */
     page: {title, story=[], journal=[]}}) {
