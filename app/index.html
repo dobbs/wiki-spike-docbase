@@ -13,12 +13,6 @@
    const neighborhood = new Map();
    const sitemaps = new Map();
 
-   function randomId() {
-     let x = new Uint32Array(2);
-     crypto.getRandomValues(x);
-     return Array.from(x, i=>i.toString(16)).join('');
-   }
-
    function intentFromLocation(location) {
      let params = new URLSearchParams(location.search);
      if (params.has('url')) {
@@ -121,6 +115,7 @@
      });
 
      const runtime = new Runtime(Library);
+     const randomId = await Library.randomId();
      if (action.intent === 'fetch') {
        pageSite = action.url.host;
        neighborhood.set(pageSite, sitemapForDomain(pageSite));

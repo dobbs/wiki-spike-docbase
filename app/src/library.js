@@ -56,6 +56,14 @@ function annotateLinks(el) {
 
 export const Library = Object.assign({}, stdlib, {
 
+  async randomId() {
+    return function randomId() {
+      let x = new Uint32Array(2);
+      crypto.getRandomValues(x);
+      return Array.from(x, i=>i.toString(16)).join('');
+    }
+  },
+
   async html() {
     const {default:DOMPurify} = await import('../dompurify@3/dist/purify.es.min.js');
     const {html:origHtml} = await stdlib.htl();
