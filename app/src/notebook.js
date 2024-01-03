@@ -28,9 +28,9 @@ export function notebook(plugins) {
         let plugin = plugins.find(({type}) => type == item.type)
         plugin ||= plugins.find(({type}) => type == 'unknown')
         const itemId = `item${item.id}`
-        main.variable().define(`boot${item.id}`, () => item)
+        main.variable().define(`data${item.id}`, () => item)
         main.variable()
-          .define(`viewof ${itemId}`, [`boot${item.id}`, ...plugin.deps], plugin.fn)
+          .define(`viewof ${itemId}`, [`data${item.id}`, ...plugin.deps], plugin.fn)
         main.variable()
           .define(itemId, ['Generators', `viewof ${itemId}`], (G, el) => G.input(el))
       }
