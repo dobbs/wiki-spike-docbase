@@ -1,13 +1,11 @@
 /*
-  We override the html() tagged template literal from Observable
-  Standard Library to do three things. First, we expand wiki markup
-  for internal and external links. Second, we add target="_blank" to
-  any link that's not an internal link. Third, we run all markup
-  through DOMPurify to reduce the risk of abusive markup.
+  We override tagged template literals from Observable Standard
+  Library to do three things. First, we expand wiki markup for
+  internal and external links. Second, we add target="_blank" to any
+  link that's not an internal link. Third, we run all markup through
+  DOMPurify to reduce the risk of abusive markup.
  */
 import {Library as StandardLibrary} from '../@observablehq/runtime@5/dist/runtime.js';
-
-const stdlib = new StandardLibrary();
 
 function annotateLinks(el) {
   function linked(text) {
@@ -54,7 +52,37 @@ function annotateLinks(el) {
   })
 }
 
-export const Library = Object.assign({}, stdlib, {
+async function htl() {
+  const [{default:DOMPurify}, _ignore_] = await Promise.all([
+    import('../dompurify@3/dist/purify.es.min.js'),
+    import('../htl@0.3.1/dist/htl.min.js') // AMD module => window.htl
+  ]);
+
+  function sanitize(dirty) {
+    const linkified = annotateLinks(dirty);
+    return DOMPurify.sanitize(dirty, {
+      RETURN_DOM: true,
+      SANITIZE_DOM: false,
+      IN_PLACE: true,
+      ADD_TAGS: ['foreignObject', 'feDropShadow'],
+      ADD_ATTR: ['target']
+    });
+  }
+  return {
+    html(...args) {
+      return sanitize(window.htl.html(...args));
+    },
+    svg(...args) {
+      return sanitize(window.htl.svg(...args));
+    }
+  }
+};
+
+export const Library = Object.assign({}, new StandardLibrary(), {
+  htl,
+  async html() {
+    return (await htl()).html;
+  },
 
   async randomId() {
     return function randomId() {
@@ -62,24 +90,5 @@ export const Library = Object.assign({}, stdlib, {
       crypto.getRandomValues(x);
       return Array.from(x, i=>i.toString(16)).join('');
     }
-  },
-
-  async html() {
-    const {default:DOMPurify} = await import('../dompurify@3/dist/purify.es.min.js');
-    const {html:origHtml} = await stdlib.htl();
-
-    function sanitize(dirty) {
-      const linkified = annotateLinks(dirty);
-      return DOMPurify.sanitize(dirty, {
-        RETURN_DOM: true,
-        SANITIZE_DOM: false,
-        IN_PLACE: true,
-        ADD_TAGS: ['foreignObject', 'feDropShadow'],
-        ADD_ATTR: ['target']
-      });
-    }
-    return function sanitizedTaggedTemplateLiteral(...args) {
-      return sanitize(origHtml(...args))
-    };
-  },
+  }
 });
