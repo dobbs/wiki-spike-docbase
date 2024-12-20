@@ -16,13 +16,19 @@ purposeful namespaces.
 But farms are also a source of challenges for wiki hosting. DNS and
 TLS certificates combine to make server management quite complex.
 
+# Try it
+
+[https://dobbs.github.io/wiki-spike-docbase/app/?url=//start.fed.wiki/welcome-visitors.json](https://dobbs.github.io/wiki-spike-docbase/app/?url=//start.fed.wiki/welcome-visitors.json)
+
 # Local Development
 
-    python3 -m http.server
+    python3 -m http.server 1080
 
 OR
 
-    file_server --cors .
+    file_server --port 1080 --cors .
+
+[http://localhost:1080/?url=//start.fed.wiki/welcome-visitors.json](http://localhost:1080/?url=//start.fed.wiki/welcome-visitors.json)
 
 # What is a Docbase?
 
