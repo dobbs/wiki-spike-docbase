@@ -30,6 +30,17 @@ OR
 
 [http://localhost:1080/?url=//start.fed.wiki/welcome-visitors.json](http://localhost:1080/?url=//start.fed.wiki/welcome-visitors.json)
 
+# Generate the sitemaps
+
+    cd ./-eric/explore
+    jq -s 'map({"title":.title,"slug":input_filename[0:-5],"date":.journal[-1].date})' \
+      *.json > system/sitemap.json
+
+    cd ./-eric/wander
+    jq -s 'map({"title":.title,"slug":input_filename[0:-5],"date":.journal[-1].date})' \
+      *.json > system/sitemap.json
+
+
 # What is a Docbase?
 
 Docbase is a term I learned from Jon Udell. In 1999 O'Reilly published
