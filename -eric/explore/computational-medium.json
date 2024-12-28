@@ -1,0 +1,152 @@
+{
+  "title": "Computational Medium",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "5607055a96e1601d",
+      "text": "See [https://youtu.be/f10NpsMmbis this session] of Hitchhiker's Guide to the Glamorous World has [[Konrad Hinsen]] giving a tour of Leibniz, a Digital Scientific Notation built on top of Glamorous Toolkit. Leibniz interface is a combination of a model, a set of annotations that transform knowledge management pages into scientific notations, and several inspector extensions. The tour shows not only how the environment can be used for expressing scientific notations, but also how one can debug a notation and how one can investigate the engine itself."
+    },
+    {
+      "type": "video",
+      "id": "95557e65172b5eea",
+      "text": "YOUTUBE f10NpsMmbis\nHitchhiker #17: Using Glamorous Toolkit for Scientific Notation - [[Konrad Hinsen]] & [[Tudor Girba]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "201c5eee064a12ae",
+      "text": "[https://youtu.be/f10NpsMmbis?t=280 4:40]\n... a computational medium is a substrate where you write things where you can write in the sense of text or pictures or whatever else to record and communicate and collaborate on the science and have the tools organized around this medium and the medium remains at all points accessible to human readers."
+    },
+    {
+      "type": "pagefold",
+      "id": "104e0c6254e49704",
+      "text": "."
+    },
+    {
+      "type": "markdown",
+      "id": "9afaa35de9b7499c",
+      "text": "I like how he has used GT features to get his own work correct. The operator hierarchy graph, for example, allows him to develop a rich type system and to talk about it without leaving GT. (27:30)\n\nNice interaction between Konrad and Tudor. Tudor sees Konrad take advantage of the latitude that Tudor has intentionally left in GT for others to do things that he hadn't imagined. (37:30)\n\nTudor: your use case is so far from what we were thinking ...\nKonrad: I just thought I would see how far I could go ... its just a prototype. (56:30)\n\nTudor: this thing that you have here is this ... this ... this ...this... (1:03:30)"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Computational Medium",
+        "story": []
+      },
+      "date": 1675432851913
+    },
+    {
+      "id": "5607055a96e1601d",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "5607055a96e1601d",
+        "text": "See [https://youtu.be/f10NpsMmbis this session] of Hitchhiker's Guide to the Glamorous World has [[Konrad Hinsen]] giving a tour of Leibniz, a Digital Scientific Notation built on top of Glamorous Toolkit. Leibniz interface is a combination of a model, a set of annotations that transform knowledge management pages into scientific notations, and several inspector extensions. The tour shows not only how the environment can be used for expressing scientific notations, but also how one can debug a notation and how one can investigate the engine itself."
+      },
+      "date": 1675432854434
+    },
+    {
+      "id": "95557e65172b5eea",
+      "type": "add",
+      "item": {
+        "type": "video",
+        "id": "95557e65172b5eea",
+        "text": "YOUTUBE f10NpsMmbis\nHitchhiker #17: Using Glamorous Toolkit for Scientific Notation - [[Konrad Hinsen]] & [[Tudor Girba]]"
+      },
+      "after": "5607055a96e1601d",
+      "date": 1675432862988
+    },
+    {
+      "id": "201c5eee064a12ae",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "201c5eee064a12ae",
+        "text": "[https://youtu.be/f10NpsMmbis?t=280 4:40]\n... a [[Computational Medium]] is a substrate where you where you write things where you can write in the sense of text or pictures or whatever else to record and communicate and collaborate on the science and have the tools organized around this medium and the medium remains ..."
+      },
+      "after": "95557e65172b5eea",
+      "date": 1675432870297
+    },
+    {
+      "type": "edit",
+      "id": "201c5eee064a12ae",
+      "item": {
+        "type": "paragraph",
+        "id": "201c5eee064a12ae",
+        "text": "[https://youtu.be/f10NpsMmbis?t=280 4:40]\n... a computational medium is a substrate where you where you write things where you can write in the sense of text or pictures or whatever else to record and communicate and collaborate on the science and have the tools organized around this medium and the medium remains ..."
+      },
+      "date": 1675432885538
+    },
+    {
+      "type": "edit",
+      "id": "201c5eee064a12ae",
+      "item": {
+        "type": "paragraph",
+        "id": "201c5eee064a12ae",
+        "text": "[https://youtu.be/f10NpsMmbis?t=280 4:40]\n... a computational medium is a substrate where you write things where you can write in the sense of text or pictures or whatever else to record and communicate and collaborate on the science and have the tools organized around this medium and the medium remains ..."
+      },
+      "date": 1675432899878
+    },
+    {
+      "type": "edit",
+      "id": "201c5eee064a12ae",
+      "item": {
+        "type": "paragraph",
+        "id": "201c5eee064a12ae",
+        "text": "[https://youtu.be/f10NpsMmbis?t=280 4:40]\n... a computational medium is a substrate where you write things where you can write in the sense of text or pictures or whatever else to record and communicate and collaborate on the science and have the tools organized around this medium and the medium remains at all points accessible to human readers."
+      },
+      "date": 1675432965243
+    },
+    {
+      "type": "fork",
+      "site": "wiki.ralfbarkow.ch",
+      "date": 1675442413482
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "104e0c6254e49704"
+      },
+      "id": "104e0c6254e49704",
+      "type": "add",
+      "after": "201c5eee064a12ae",
+      "date": 1675442567111
+    },
+    {
+      "type": "edit",
+      "id": "104e0c6254e49704",
+      "item": {
+        "type": "pagefold",
+        "id": "104e0c6254e49704",
+        "text": "."
+      },
+      "date": 1675442572073
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9afaa35de9b7499c"
+      },
+      "id": "9afaa35de9b7499c",
+      "type": "add",
+      "after": "104e0c6254e49704",
+      "date": 1675442575775
+    },
+    {
+      "type": "edit",
+      "id": "9afaa35de9b7499c",
+      "item": {
+        "type": "markdown",
+        "id": "9afaa35de9b7499c",
+        "text": "I like how he has used GT features to get his own work correct. The operator hierarchy graph, for example, allows him to develop a rich type system and to talk about it without leaving GT. (27:30)\n\nNice interaction between Konrad and Tudor. Tudor sees Konrad take advantage of the latitude that Tudor has intentionally left in GT for others to do things that he hadn't imagined. (37:30)\n\nTudor: your use case is so far from what we were thinking ...\nKonrad: I just thought I would see how far I could go ... its just a prototype. (56:30)\n\nTudor: this thing that you have here is this ... this ... this ...this... (1:03:30)"
+      },
+      "date": 1675442579721
+    },
+    {
+      "type": "fork",
+      "site": "found.ward.fed.wiki",
+      "date": 1688243681159
+    }
+  ]
+}
