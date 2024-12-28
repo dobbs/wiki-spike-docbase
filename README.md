@@ -33,11 +33,11 @@ OR
 # Generate the sitemaps
 
     cd ./-eric/explore
-    jq -s 'map({"title":.title,"slug":input_filename[0:-5],"date":.journal[-1].date})' \
+    jq -n '[inputs | {"title":.title, "slug":input_filename[0:-5], "date":.journal[-1].date}]' \
       *.json > system/sitemap.json
 
     cd ./-eric/wander
-    jq -s 'map({"title":.title,"slug":input_filename[0:-5],"date":.journal[-1].date})' \
+    jq -n '[inputs | {"title":.title, "slug":input_filename[0:-5], "date":.journal[-1].date}]' \
       *.json > system/sitemap.json
 
 
